@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/8c785304-4280-47e5-a110-02136e53f8cf.png" 
               alt="Hikigai AI Logo" 
@@ -23,22 +24,22 @@ const Header = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">
               Hikigai AI
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+            <Link to="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Home
-            </a>
-            <a href="#platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+            </Link>
+            <Link to="/platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Platform
-            </a>
-            <a href="#products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+            </Link>
+            <Link to="/ai-products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               AI Products
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+            </Link>
+            <Link to="/about-us" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               About Us
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -60,18 +61,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
-              <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+              <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Home
-              </a>
-              <a href="#platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+              </Link>
+              <Link to="/platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Platform
-              </a>
-              <a href="#products" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+              </Link>
+              <Link to="/ai-products" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 AI Products
-              </a>
-              <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+              </Link>
+              <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 About Us
-              </a>
+              </Link>
               <button className="w-full mt-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-medium">
                 Get Started
               </button>

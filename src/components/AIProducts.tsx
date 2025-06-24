@@ -1,49 +1,55 @@
 
-import { Brain, Eye, Heart, Pill, FileText, Database } from 'lucide-react';
+import { Phone, Brain, FileText, CreditCard, BarChart3, BookOpen } from 'lucide-react';
 
 const AIProducts = () => {
   const products = [
     {
+      icon: Phone,
+      title: "AI Voice Appointment Scheduler",
+      description: "Intelligent voice-powered scheduling system that handles patient appointments 24/7",
+      features: ["Natural language processing", "Calendar integration", "Automated confirmations"],
+      color: "blue",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop"
+    },
+    {
       icon: Brain,
-      title: "Neural Diagnostics",
-      description: "Advanced AI algorithms for neurological condition detection and monitoring",
-      features: ["Real-time analysis", "Pattern recognition", "Predictive modeling"],
-      color: "blue"
-    },
-    {
-      icon: Eye,
-      title: "Vision AI",
-      description: "Computer vision solutions for medical imaging and radiology",
-      features: ["Image analysis", "Anomaly detection", "3D reconstruction"],
-      color: "green"
-    },
-    {
-      icon: Heart,
-      title: "Cardiac Monitor",
-      description: "AI-powered cardiovascular health monitoring and risk assessment",
-      features: ["ECG analysis", "Risk prediction", "Early warning system"],
-      color: "red"
-    },
-    {
-      icon: Pill,
-      title: "Drug Discovery",
-      description: "Accelerate pharmaceutical research with AI-driven drug discovery",
-      features: ["Molecular analysis", "Clinical trials", "Safety prediction"],
-      color: "purple"
+      title: "Patient Prep Insights",
+      description: "AI-driven patient preparation recommendations and pre-visit optimization",
+      features: ["Pre-visit analysis", "Risk assessment", "Care pathway optimization"],
+      color: "green",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop"
     },
     {
       icon: FileText,
-      title: "Clinical Notes AI",
-      description: "Natural language processing for clinical documentation",
-      features: ["Auto-transcription", "Clinical coding", "Documentation assist"],
-      color: "orange"
+      title: "AI Scribe for EHR Automation",
+      description: "Automated clinical documentation with real-time transcription and coding",
+      features: ["Real-time transcription", "ICD-10 coding", "Clinical note generation"],
+      color: "purple",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop"
     },
     {
-      icon: Database,
-      title: "Health Analytics",
-      description: "Comprehensive health data analytics and population health insights",
-      features: ["Data visualization", "Trend analysis", "Population health"],
-      color: "teal"
+      icon: CreditCard,
+      title: "Automated Claims Processing with AI",
+      description: "Streamlined insurance claims processing with intelligent error detection",
+      features: ["Automated submission", "Error detection", "Compliance checking"],
+      color: "orange",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop"
+    },
+    {
+      icon: BarChart3,
+      title: "Patient Intelligence and Analytics",
+      description: "Advanced analytics platform for population health insights and trends",
+      features: ["Population health metrics", "Predictive analytics", "Custom dashboards"],
+      color: "teal",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=400&fit=crop"
+    },
+    {
+      icon: BookOpen,
+      title: "Medical Research Copilot for Doctors",
+      description: "AI-powered research assistant for evidence-based medical decisions",
+      features: ["Literature review", "Clinical guidelines", "Research recommendations"],
+      color: "red",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop"
     }
   ];
 
@@ -71,26 +77,36 @@ const AIProducts = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
-              <div className={`p-4 rounded-full w-fit mb-6 transition-colors duration-200 ${getColorClasses(product.color)}`}>
-                <product.icon size={32} />
+            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className={`absolute top-4 left-4 p-3 rounded-full transition-colors duration-200 ${getColorClasses(product.color)}`}>
+                  <product.icon size={24} />
+                </div>
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{product.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
-              
-              <div className="space-y-2 mb-6">
-                {product.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-gray-500">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    {feature}
-                  </div>
-                ))}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{product.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  {product.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-gray-500">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium">
+                  Learn More
+                </button>
               </div>
-              
-              <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium">
-                Learn More
-              </button>
             </div>
           ))}
         </div>
