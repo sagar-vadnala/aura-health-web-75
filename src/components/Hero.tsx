@@ -1,4 +1,3 @@
-
 import { ArrowRight, Shield, Stethoscope, Activity } from 'lucide-react';
 
 const Hero = () => {
@@ -8,16 +7,6 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <div className="flex justify-center lg:justify-start mb-8">
-              <div className="p-4 bg-white rounded-full shadow-lg">
-                <img 
-                  src="/lovable-uploads/8c785304-4280-47e5-a110-02136e53f8cf.png" 
-                  alt="Hikigai AI Logo" 
-                  className="h-16 w-16"
-                />
-              </div>
-            </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Transforming Healthcare
               <span className="block bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">
