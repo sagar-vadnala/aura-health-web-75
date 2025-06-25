@@ -1,7 +1,7 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Users, Award, Globe, Lightbulb, Heart, Target } from 'lucide-react';
+import { Users, Award, Globe, Lightbulb, Heart, Target, Calendar } from 'lucide-react';
 
 const AboutUs = () => {
   const stats = [
@@ -55,6 +55,45 @@ const AboutUs = () => {
     }
   ];
 
+  const journey = [
+    {
+      year: "2019",
+      title: "Foundation",
+      description: "Hikigai AI was founded with a vision to transform healthcare through artificial intelligence",
+      milestone: "Company Founded"
+    },
+    {
+      year: "2020",
+      title: "First Product Launch",
+      description: "Launched our first AI Scribe prototype, revolutionizing clinical documentation",
+      milestone: "AI Scribe Beta"
+    },
+    {
+      year: "2021",
+      title: "Healthcare Partnerships",
+      description: "Established partnerships with leading healthcare institutions and received HIPAA compliance certification",
+      milestone: "10+ Hospital Partners"
+    },
+    {
+      year: "2022",
+      title: "Product Expansion",
+      description: "Expanded our product suite with Patient Intelligence Analytics and Voice Appointment Scheduler",
+      milestone: "Multi-Product Platform"
+    },
+    {
+      year: "2023",
+      title: "KOI Engine Development",
+      description: "Developed our proprietary KOI AI Engine, powering all our healthcare solutions",
+      milestone: "KOI AI Engine"
+    },
+    {
+      year: "2024",
+      title: "Global Expansion",
+      description: "Expanded internationally and launched KOI Smart App, serving over 1M patients worldwide",
+      milestone: "1M+ Patients Served"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -104,8 +143,50 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Our Journey */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <Calendar className="text-purple-600" size={48} />
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Journey</h3>
+            <p className="text-lg text-gray-600">The milestones that shaped our path to revolutionizing healthcare</p>
+          </div>
+          
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-purple-200"></div>
+            
+            <div className="space-y-12">
+              {journey.map((item, index) => (
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                      <div className="text-2xl font-bold text-purple-600 mb-2">{item.year}</div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h4>
+                      <p className="text-gray-600 mb-4">{item.description}</p>
+                      <div className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+                        {item.milestone}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Timeline dot */}
+                  <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full border-4 border-white shadow-lg">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                  
+                  <div className="w-1/2"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h3>
@@ -114,7 +195,7 @@ const AboutUs = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             {values.map((value, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-2xl hover:shadow-lg transition-shadow duration-200">
+              <div key={index} className="flex items-start space-x-4 p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-200">
                 <div className="p-3 bg-purple-100 rounded-full flex-shrink-0">
                   <value.icon className="text-purple-600" size={24} />
                 </div>
@@ -129,7 +210,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h3>

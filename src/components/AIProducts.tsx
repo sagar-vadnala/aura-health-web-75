@@ -9,7 +9,7 @@ const AIProducts = () => {
       description: "Intelligent voice-powered scheduling system that handles patient appointments 24/7",
       features: ["Natural language processing", "Calendar integration", "Automated confirmations"],
       color: "blue",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=400&fit=crop"
     },
     {
       icon: Brain,
@@ -17,7 +17,7 @@ const AIProducts = () => {
       description: "AI-driven patient preparation recommendations and pre-visit optimization",
       features: ["Pre-visit analysis", "Risk assessment", "Care pathway optimization"],
       color: "green",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=400&fit=crop"
     },
     {
       icon: FileText,
@@ -25,7 +25,7 @@ const AIProducts = () => {
       description: "Automated clinical documentation with real-time transcription and coding",
       features: ["Real-time transcription", "ICD-10 coding", "Clinical note generation"],
       color: "purple",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=400&fit=crop"
     },
     {
       icon: CreditCard,
@@ -33,7 +33,7 @@ const AIProducts = () => {
       description: "Streamlined insurance claims processing with intelligent error detection",
       features: ["Automated submission", "Error detection", "Compliance checking"],
       color: "orange",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1559757175-0eb6d27d9d84?w=400&h=400&fit=crop"
     },
     {
       icon: BarChart3,
@@ -41,7 +41,7 @@ const AIProducts = () => {
       description: "Advanced analytics platform for population health insights and trends",
       features: ["Population health metrics", "Predictive analytics", "Custom dashboards"],
       color: "teal",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop"
     },
     {
       icon: BookOpen,
@@ -49,7 +49,7 @@ const AIProducts = () => {
       description: "AI-powered research assistant for evidence-based medical decisions",
       features: ["Literature review", "Clinical guidelines", "Research recommendations"],
       color: "red",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop"
     }
   ];
 
@@ -66,12 +66,12 @@ const AIProducts = () => {
   };
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">AI-Powered Healthcare Solutions</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Features</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive suite of AI products designed to revolutionize every aspect of healthcare delivery
+            Our comprehensive suite of AI features designed to revolutionize every aspect of healthcare delivery
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const AIProducts = () => {
                 <img 
                   src={product.image} 
                   alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className={`absolute top-4 left-4 p-3 rounded-full transition-colors duration-200 ${getColorClasses(product.color)}`}>

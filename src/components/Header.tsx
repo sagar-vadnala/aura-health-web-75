@@ -1,13 +1,18 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleProductsDropdown = () => {
+    setIsProductsDropdownOpen(!isProductsDropdownOpen);
   };
 
   return (
@@ -34,9 +39,33 @@ const Header = () => {
             <Link to="/platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Platform
             </Link>
-            <Link to="/ai-products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              AI Products
-            </Link>
+            <div className="relative">
+              <button 
+                onClick={toggleProductsDropdown}
+                className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
+              >
+                Products
+                <ChevronDown className="ml-1" size={16} />
+              </button>
+              {isProductsDropdownOpen && (
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  <Link 
+                    to="/ai-products" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                    onClick={() => setIsProductsDropdownOpen(false)}
+                  >
+                    AI Scribe
+                  </Link>
+                  <Link 
+                    to="/ai-products" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                    onClick={() => setIsProductsDropdownOpen(false)}
+                  >
+                    KOI Smart App
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/about-us" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               About Us
             </Link>
@@ -67,9 +96,15 @@ const Header = () => {
               <Link to="/platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Platform
               </Link>
-              <Link to="/ai-products" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
-                AI Products
-              </Link>
+              <div className="px-3 py-2">
+                <div className="text-base font-medium text-gray-700 mb-2">Products</div>
+                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
+                  AI Scribe
+                </Link>
+                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
+                  KOI Smart App
+                </Link>
+              </div>
               <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 About Us
               </Link>
