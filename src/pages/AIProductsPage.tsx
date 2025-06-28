@@ -140,7 +140,7 @@ const AIProductsPage = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Features & Benefits</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {product.features.map((feature, featureIndex) => <div key={featureIndex} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-200 border border-gray-100">
+                {product.features.map((feature, featureIndex) => <div key={featureIndex} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-200 border border-gray-100 px-[24px] py-[6px]">
                     <div className="p-3 bg-purple-100 rounded-full w-fit mb-4">
                       <feature.icon className="text-purple-600" size={24} />
                     </div>
