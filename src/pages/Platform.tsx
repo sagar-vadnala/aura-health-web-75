@@ -1,107 +1,138 @@
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain } from 'lucide-react';
+import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain, Settings, UserCheck, AlertTriangle, EyeOff } from 'lucide-react';
+
 const Platform = () => {
-  const coreFeatures = [{
-    icon: Brain,
-    title: "Advanced AI Engine",
-    description: "Proprietary machine learning models trained specifically for healthcare applications"
-  }, {
-    icon: Database,
-    title: "Unified Data Hub",
-    description: "Centralized data processing and management across all healthcare touchpoints"
-  }, {
-    icon: Cloud,
-    title: "Cloud-Native Architecture",
-    description: "Scalable infrastructure that grows with your healthcare organization"
-  }, {
-    icon: Shield,
-    title: "Enterprise Security",
-    description: "HIPAA-compliant infrastructure with military-grade encryption"
-  }];
-  const fourPillars = [{
-    icon: Zap,
-    title: "Performance",
-    description: "Lightning-fast processing with sub-second response times for critical healthcare decisions, ensuring real-time clinical support when it matters most.",
-    metric: "<1s Response",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
-  }, {
-    icon: Shield,
-    title: "Security",
-    description: "End-to-end encryption with advanced access controls and comprehensive audit trails, maintaining the highest standards of patient data protection.",
-    metric: "100% HIPAA Compliant",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
-  }, {
-    icon: Database,
-    title: "Reliability",
-    description: "99.9% uptime guarantee with redundant systems and automated failover mechanisms, ensuring your healthcare operations never stop.",
-    metric: "99.9% Uptime",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
-  }, {
-    icon: Users,
-    title: "Scalability",
-    description: "Seamlessly scales from small practices to large hospital networks, adapting to your organization's growth without compromising performance.",
-    metric: "Unlimited Scale",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
-  }];
-  const integrations = ["Epic EHR", "Cerner", "AllScripts", "athenahealth", "NextGen", "eClinicalWorks", "Practice Fusion", "DrChrono", "Amazing Charts", "CureMD", "Greenway Health", "MEDITECH"];
-  const platformFeatures = [{
-    icon: Code,
-    title: "API-First Design",
-    description: "Comprehensive RESTful APIs with extensive documentation and SDK support"
-  }, {
-    icon: Users,
-    title: "Multi-User Collaboration",
-    description: "Role-based access control for entire healthcare teams"
-  }, {
-    icon: Globe,
-    title: "Global Deployment",
-    description: "Multi-region deployment with data residency compliance"
-  }, {
-    icon: Award,
-    title: "Clinical Validation",
-    description: "Validated by leading medical institutions and healthcare professionals"
-  }];
-  return <div className="min-h-screen">
+  const fourPillars = [
+    {
+      icon: Settings,
+      title: "Open Extensible Platform",
+      description: "Built with modular architecture that allows seamless integration with existing healthcare systems and third-party applications. Our open APIs enable custom workflows and unlimited scalability.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+    },
+    {
+      icon: UserCheck,
+      title: "Personalization",
+      description: "AI-driven personalized experiences tailored to individual clinician workflows and patient needs. Machine learning adapts to your practice patterns for optimized healthcare delivery.",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Bias Prevention",
+      description: "Advanced algorithms designed to identify and eliminate healthcare disparities. Our AI models are continuously audited to ensure fair and equitable patient care across all demographics.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
+    },
+    {
+      icon: EyeOff,
+      title: "Privacy Centric",
+      description: "Privacy-by-design architecture with zero-trust security model. Patient data remains encrypted at rest and in transit, with granular access controls and comprehensive audit trails.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
+    }
+  ];
+
+  const integrations = [
+    "Epic EHR", "Cerner", "AllScripts", "athenahealth", "NextGen", "eClinicalWorks", 
+    "Practice Fusion", "DrChrono", "Amazing Charts", "CureMD", "Greenway Health", "MEDITECH"
+  ];
+
+  const platformFeatures = [
+    {
+      icon: FileText,
+      title: "Streamlined Clinical Documentation",
+      description: "AI-powered documentation that reduces charting time by 75% while maintaining clinical accuracy and compliance standards."
+    },
+    {
+      icon: Brain,
+      title: "Advanced Clinical Decision Support",
+      description: "Evidence-based recommendations and alerts that enhance diagnostic accuracy and treatment planning for better patient outcomes."
+    },
+    {
+      icon: Zap,
+      title: "Enhanced ROI through AI driven Automation",
+      description: "Automate routine tasks and workflows to increase efficiency, reduce costs, and maximize return on investment in healthcare technology."
+    },
+    {
+      icon: Shield,
+      title: "Increased Patient Safety with Alerting",
+      description: "Real-time alerts for drug interactions, allergies, and critical values to prevent medical errors and improve patient safety."
+    },
+    {
+      icon: Database,
+      title: "Comprehensive Data Integration and Interoperability",
+      description: "Seamless data exchange across multiple systems and platforms for complete patient visibility and coordinated care."
+    },
+    {
+      icon: Lock,
+      title: "Robust Security and Privacy Compliance",
+      description: "Enterprise-grade security with HIPAA compliance, SOC 2 certification, and advanced threat protection for healthcare data."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               The <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Hikigai Platform</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Built by combining Large Action Models (LAMs), structured Knowledge Graphs, and an advanced Agentic Framework to deliver healthcare insights that you can trust.</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Built by combining Large Action Models (LAMs), structured Knowledge Graphs, and an advanced Agentic Framework to deliver healthcare insights that you can trust.
+            </p>
+          </div>
+
+          {/* Message Block */}
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 max-w-5xl mx-auto">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Hikigai Platform represents a paradigm shift in healthcare technology, where artificial intelligence doesn't just process data—it understands context, learns from interactions, and evolves with your practice. Our platform is built on the foundation of trust, transparency, and clinical excellence.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                By leveraging Large Action Models, we've created an AI system that can perform complex healthcare tasks while maintaining the nuanced understanding that medical practice requires. Our Knowledge Graphs connect disparate pieces of medical information, creating a comprehensive view of patient health that was previously impossible.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Agentic Framework enables our AI to take autonomous actions within defined parameters, allowing for real-time decision support and workflow automation that adapts to your specific practice patterns. This isn't just another healthcare tool—it's your intelligent partner in delivering exceptional patient care.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Security and privacy are not afterthoughts but fundamental design principles. Every component of our platform is built with healthcare's stringent requirements in mind, ensuring that patient data remains protected while enabling the collaborative care that modern medicine demands.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Join thousands of healthcare professionals who have already transformed their practice with Hikigai. Experience the future of healthcare technology today, where AI amplifies human expertise rather than replacing it.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Core Technology Section */}
-      
 
       {/* 4 Pillars Section */}
       <section className="bg-gray-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">4 Pillars of HKG Platform</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">4 Pillars of Hikigai Platform</h2>
             <p className="text-xl text-gray-600">The foundation of reliable healthcare AI</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {fourPillars.map((pillar, index) => <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+            {fourPillars.map((pillar, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
                 <div className="relative mb-6">
-                  <img src={pillar.image} alt={pillar.title} className="w-full h-40 object-cover rounded-lg" />
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-40 object-cover rounded-lg" 
+                  />
                   <div className="absolute -bottom-3 left-4 p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
                     <pillar.icon className="text-purple-600" size={24} />
                   </div>
                 </div>
-                <div className="text-center mb-4">
-                  <span className="text-lg font-bold text-purple-600">{pillar.metric}</span>
-                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{pillar.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-center">{pillar.description}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -159,12 +190,14 @@ const Platform = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-200">
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <CheckCircle className="text-green-500" size={20} />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{integration}</span>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -177,21 +210,23 @@ const Platform = () => {
             <p className="text-xl text-gray-600">Everything you need for modern healthcare delivery</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformFeatures.map((feature, index) => <div key={index} className="flex items-start space-x-6 p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-200">
-                <div className="p-4 bg-purple-100 rounded-full flex-shrink-0">
-                  <feature.icon className="text-purple-600" size={24} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {platformFeatures.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-200 group border border-gray-100">
+                <div className="p-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl group-hover:from-purple-200 group-hover:to-blue-200 transition-colors duration-200 w-fit mb-6">
+                  <feature.icon className="text-purple-600" size={28} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </div>
-              </div>)}
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Platform;

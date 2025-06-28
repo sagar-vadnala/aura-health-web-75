@@ -2,6 +2,7 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import CTAForm from '../components/CTAForm';
+import WhyChoose from '../components/WhyChoose';
 import AIProducts from '../components/AIProducts';
 import PlatformHighlights from '../components/PlatformHighlights';
 import Testimonials from '../components/Testimonials';
@@ -13,6 +14,7 @@ const Index = () => {
       <Header />
       <Hero />
       <CTAForm />
+      <WhyChoose />
       <AIProducts />
       <PlatformHighlights />
       <Testimonials />
