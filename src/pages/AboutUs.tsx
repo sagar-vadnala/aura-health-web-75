@@ -1,123 +1,143 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Users, Award, Globe, Lightbulb, Heart, Target, Calendar, MapPin, Mail, Phone, Briefcase, Home } from 'lucide-react';
-
 const AboutUs = () => {
-  const stats = [
-    { number: "50+", label: "Healthcare Partners" },
-    { number: "1M+", label: "Patients Served" },
-    { number: "99.9%", label: "System Uptime" },
-    { number: "24/7", label: "Support Available" }
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Patient-Centric",
-      description: "Every solution we develop puts patient outcomes and safety at the forefront"
-    },
-    {
-      icon: Award,
-      title: "Clinical Excellence", 
-      description: "Our AI models are validated by leading medical professionals and institutions"
-    },
-    {
-      icon: Globe,
-      title: "Global Impact",
-      description: "Democratizing access to advanced healthcare AI across the world"
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation First",
-      description: "Continuously pushing the boundaries of what's possible in healthcare AI"
-    }
-  ];
-
-  const foundingTeam = [
-    {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Executive Officer & Co-Founder",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
-      bio: "Former emergency medicine physician with 15+ years in healthcare technology"
-    },
-    {
-      name: "Michael Chen",
-      role: "Chief Technology Officer & Co-Founder", 
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
-      bio: "Former Google AI researcher specializing in healthcare machine learning"
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      role: "Chief Medical Officer & Co-Founder",
-      image: "https://images.unsplash.com/photo-1594824475518-6a2a522b2fa3?w=300&h=300&fit=crop&crop=face",
-      bio: "Practicing physician and healthcare informatics expert with 20+ years experience"
-    },
-    {
-      name: "David Kim",
-      role: "Chief Product Officer & Co-Founder",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      bio: "Product leadership veteran with expertise in healthcare workflow optimization"
-    }
-  ];
-
-  const teamMembers = [
-    { name: "Dr. Lisa Park", role: "Senior AI Researcher", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" },
-    { name: "James Wilson", role: "Lead Software Engineer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Maria Santos", role: "Clinical Data Scientist", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face" },
-    { name: "Alex Thompson", role: "DevOps Engineer", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Rachel Green", role: "Healthcare Solutions Architect", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop&crop=face" },
-    { name: "Carlos Martinez", role: "Machine Learning Engineer", image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Jennifer Lee", role: "Medical Informatics Specialist", image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face" },
-    { name: "Robert Johnson", role: "Security Engineer", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Amanda Davis", role: "Clinical Research Lead", image: "https://images.unsplash.com/photo-1494790108755-2616c0763d5a?w=200&h=200&fit=crop&crop=face" },
-    { name: "Kevin Brown", role: "Frontend Developer", image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Samantha Taylor", role: "UX Research Lead", image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=face" },
-    { name: "Thomas Anderson", role: "Data Engineer", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face" },
-    { name: "Dr. Nicole White", role: "Quality Assurance Lead", image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200&h=200&fit=crop&crop=face" }
-  ];
-
-  const journey = [
-    {
-      year: "2019",
-      title: "Foundation",
-      description: "Hikigai AI was founded with a vision to transform healthcare through artificial intelligence",
-      milestone: "Company Founded"
-    },
-    {
-      year: "2020", 
-      title: "First Product Launch",
-      description: "Launched our first AI Scribe prototype, revolutionizing clinical documentation",
-      milestone: "AI Scribe Beta"
-    },
-    {
-      year: "2021",
-      title: "Healthcare Partnerships", 
-      description: "Established partnerships with leading healthcare institutions and received HIPAA compliance certification",
-      milestone: "10+ Hospital Partners"
-    },
-    {
-      year: "2022",
-      title: "Product Expansion",
-      description: "Expanded our product suite with Patient Intelligence Analytics and Voice Appointment Scheduler", 
-      milestone: "Multi-Product Platform"
-    },
-    {
-      year: "2023",
-      title: "KOI Engine Development",
-      description: "Developed our proprietary KOI AI Engine, powering all our healthcare solutions",
-      milestone: "KOI AI Engine"
-    },
-    {
-      year: "2024",
-      title: "Global Expansion", 
-      description: "Expanded internationally and launched KOI Smart App, serving over 1M patients worldwide",
-      milestone: "1M+ Patients Served"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const stats = [{
+    number: "50+",
+    label: "Healthcare Partners"
+  }, {
+    number: "1M+",
+    label: "Patients Served"
+  }, {
+    number: "99.9%",
+    label: "System Uptime"
+  }, {
+    number: "24/7",
+    label: "Support Available"
+  }];
+  const values = [{
+    icon: Heart,
+    title: "Patient-Centric",
+    description: "Every solution we develop puts patient outcomes and safety at the forefront"
+  }, {
+    icon: Award,
+    title: "Clinical Excellence",
+    description: "Our AI models are validated by leading medical professionals and institutions"
+  }, {
+    icon: Globe,
+    title: "Global Impact",
+    description: "Democratizing access to advanced healthcare AI across the world"
+  }, {
+    icon: Lightbulb,
+    title: "Innovation First",
+    description: "Continuously pushing the boundaries of what's possible in healthcare AI"
+  }];
+  const foundingTeam = [{
+    name: "Dr. Sarah Johnson",
+    role: "Chief Executive Officer & Co-Founder",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
+    bio: "Former emergency medicine physician with 15+ years in healthcare technology"
+  }, {
+    name: "Michael Chen",
+    role: "Chief Technology Officer & Co-Founder",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
+    bio: "Former Google AI researcher specializing in healthcare machine learning"
+  }, {
+    name: "Dr. Emily Rodriguez",
+    role: "Chief Medical Officer & Co-Founder",
+    image: "https://images.unsplash.com/photo-1594824475518-6a2a522b2fa3?w=300&h=300&fit=crop&crop=face",
+    bio: "Practicing physician and healthcare informatics expert with 20+ years experience"
+  }, {
+    name: "David Kim",
+    role: "Chief Product Officer & Co-Founder",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+    bio: "Product leadership veteran with expertise in healthcare workflow optimization"
+  }];
+  const teamMembers = [{
+    name: "Dr. Lisa Park",
+    role: "Senior AI Researcher",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "James Wilson",
+    role: "Lead Software Engineer",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Maria Santos",
+    role: "Clinical Data Scientist",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Alex Thompson",
+    role: "DevOps Engineer",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Rachel Green",
+    role: "Healthcare Solutions Architect",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Carlos Martinez",
+    role: "Machine Learning Engineer",
+    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Jennifer Lee",
+    role: "Medical Informatics Specialist",
+    image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Robert Johnson",
+    role: "Security Engineer",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Amanda Davis",
+    role: "Clinical Research Lead",
+    image: "https://images.unsplash.com/photo-1494790108755-2616c0763d5a?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Kevin Brown",
+    role: "Frontend Developer",
+    image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Samantha Taylor",
+    role: "UX Research Lead",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Thomas Anderson",
+    role: "Data Engineer",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face"
+  }, {
+    name: "Dr. Nicole White",
+    role: "Quality Assurance Lead",
+    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200&h=200&fit=crop&crop=face"
+  }];
+  const journey = [{
+    year: "2019",
+    title: "Foundation",
+    description: "Hikigai AI was founded with a vision to transform healthcare through artificial intelligence",
+    milestone: "Company Founded"
+  }, {
+    year: "2020",
+    title: "First Product Launch",
+    description: "Launched our first AI Scribe prototype, revolutionizing clinical documentation",
+    milestone: "AI Scribe Beta"
+  }, {
+    year: "2021",
+    title: "Healthcare Partnerships",
+    description: "Established partnerships with leading healthcare institutions and received HIPAA compliance certification",
+    milestone: "10+ Hospital Partners"
+  }, {
+    year: "2022",
+    title: "Product Expansion",
+    description: "Expanded our product suite with Patient Intelligence Analytics and Voice Appointment Scheduler",
+    milestone: "Multi-Product Platform"
+  }, {
+    year: "2023",
+    title: "KOI Engine Development",
+    description: "Developed our proprietary KOI AI Engine, powering all our healthcare solutions",
+    milestone: "KOI AI Engine"
+  }, {
+    year: "2024",
+    title: "Global Expansion",
+    description: "Expanded internationally and launched KOI Smart App, serving over 1M patients worldwide",
+    milestone: "1M+ Patients Served"
+  }];
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -136,39 +156,10 @@ const AboutUs = () => {
       </section>
 
       {/* About Hikigai */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">About Hikigai</h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 rounded-2xl hover:bg-gray-50 transition-colors duration-200">
-                <div className="p-3 bg-purple-100 rounded-full flex-shrink-0">
-                  <value.icon className="text-purple-600" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Vision */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12">
             <div className="max-w-4xl mx-auto text-center">
@@ -188,7 +179,7 @@ const AboutUs = () => {
       </section>
 
       {/* Mission */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 md:p-12">
             <div className="max-w-4xl mx-auto text-center">
@@ -208,19 +199,7 @@ const AboutUs = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Company Overview</h3>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Founded in 2019, Hikigai AI has grown from a small team of healthcare and AI experts to a global 
-              company serving over 1 million patients through our innovative healthcare solutions. Our platform 
-              combines cutting-edge artificial intelligence with deep healthcare domain expertise to deliver 
-              solutions that truly understand the complexities of modern healthcare delivery.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Journey / Future Scope */}
       <section className="bg-white py-20">
@@ -236,8 +215,7 @@ const AboutUs = () => {
           <div className="relative">
             <div className="flex overflow-x-auto pb-6">
               <div className="flex space-x-8 min-w-max">
-                {journey.map((item, index) => (
-                  <div key={index} className="flex flex-col items-center min-w-[300px]">
+                {journey.map((item, index) => <div key={index} className="flex flex-col items-center min-w-[300px]">
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-4">
                       <div className="text-2xl font-bold text-purple-600 mb-2 text-center">{item.year}</div>
                       <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">{item.title}</h4>
@@ -248,11 +226,8 @@ const AboutUs = () => {
                         </span>
                       </div>
                     </div>
-                    {index < journey.length - 1 && (
-                      <div className="w-8 h-0.5 bg-purple-200"></div>
-                    )}
-                  </div>
-                ))}
+                    {index < journey.length - 1 && <div className="w-8 h-0.5 bg-purple-200"></div>}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -260,7 +235,7 @@ const AboutUs = () => {
       </section>
 
       {/* Remote 1st Culture */}
-      <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
@@ -291,7 +266,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Founding Team</h3>
@@ -299,20 +274,14 @@ const AboutUs = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {foundingTeam.map((member, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200">
+            {foundingTeam.map((member, index) => <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200">
                 <div className="relative mb-6">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-24 h-24 rounded-full object-cover mx-auto"
-                  />
+                  <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full object-cover mx-auto" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h4>
                 <p className="text-purple-600 font-medium mb-3 text-sm">{member.role}</p>
                 <p className="text-gray-600 text-xs">{member.bio}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center mb-16">
@@ -321,25 +290,19 @@ const AboutUs = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl p-4 text-center hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            {teamMembers.map((member, index) => <div key={index} className="bg-white rounded-xl p-4 text-center hover:shadow-md transition-shadow duration-200 border border-gray-100">
                 <div className="relative mb-4">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-16 h-16 rounded-full object-cover mx-auto"
-                  />
+                  <img src={member.image} alt={member.name} className="w-16 h-16 rounded-full object-cover mx-auto" />
                 </div>
                 <h4 className="text-sm font-semibold text-gray-900 mb-1">{member.name}</h4>
                 <p className="text-purple-600 text-xs">{member.role}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* Contact + Location */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Contact & Location</h3>
@@ -389,36 +352,20 @@ const AboutUs = () => {
       </section>
 
       {/* Careers */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex justify-center mb-6">
-              <Briefcase className="text-purple-600" size={48} />
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Join Our Team</h3>
-            <p className="text-lg text-gray-600">Help us transform healthcare through AI innovation</p>
-          </div>
+          
           
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 text-center">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">Open Positions</h4>
-            <p className="text-lg text-gray-600 mb-8">
-              We're currently not accepting new applications as we focus on growing our existing team. 
-              However, we're always interested in connecting with talented individuals who are passionate 
-              about healthcare AI.
-            </p>
-            <p className="text-gray-600 mb-8">
-              Stay tuned for future opportunities by following us on social media or checking back regularly.
-            </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors duration-200 font-semibold">
-              Stay Updated on Opportunities
-            </button>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Join Our Team</h4>
+            <p className="text-lg text-gray-600 mb-8">Help us Transform Healthcare.</p>
+            
+            <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors duration-200 font-semibold">Open Positions</button>
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutUs;
