@@ -28,7 +28,7 @@ const CTAForm = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Ready to Transform Your <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Healthcare Practice?</span>
               </h2>
-              <p className="text-xl text-gray-600">Get started with Hikigai AI today and experience the future of Healthcare documentation</p>
+              <p className="text-xl text-gray-600 font-normal text-left mx-0 my-0">Get started with Hikigai AI to experience the future of Healthcare documentation and reduce clinician load from day one.</p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-6">
