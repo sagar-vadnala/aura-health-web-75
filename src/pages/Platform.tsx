@@ -1,7 +1,6 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain, Settings, UserCheck, AlertTriangle, EyeOff } from 'lucide-react';
+import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain, Settings, UserCheck, AlertTriangle, EyeOff, FileText } from 'lucide-react';
 
 const Platform = () => {
   const fourPillars = [
