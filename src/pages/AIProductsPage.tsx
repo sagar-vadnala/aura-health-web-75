@@ -1,135 +1,106 @@
-
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FileText, Brain, Calendar, Play, ArrowRight, Shield, Zap, Users, Clock, Database, Award } from 'lucide-react';
-
 const AIProductsPage = () => {
-  const products = [
-    {
-      id: 'ai-scribe',
+  const products = [{
+    id: 'ai-scribe',
+    icon: FileText,
+    title: "AI Scribe",
+    subtitle: "Revolutionary AI-powered clinical documentation system",
+    heroDescription: "Transform doctor-patient conversations into structured medical records in real-time with 98% accuracy and seamless EHR integration.",
+    features: [{
+      icon: Shield,
+      title: "Real-time speech-to-text transcription",
+      description: "Convert conversations to text instantly with 98% accuracy"
+    }, {
+      icon: Database,
+      title: "Automatic ICD-10 coding",
+      description: "Generate accurate medical codes automatically"
+    }, {
       icon: FileText,
-      title: "AI Scribe",
-      subtitle: "Revolutionary AI-powered clinical documentation system",
-      heroDescription: "Transform doctor-patient conversations into structured medical records in real-time with 98% accuracy and seamless EHR integration.",
-      features: [
-        {
-          icon: Shield,
-          title: "Real-time speech-to-text transcription",
-          description: "Convert conversations to text instantly with 98% accuracy"
-        },
-        {
-          icon: Database,
-          title: "Automatic ICD-10 coding",
-          description: "Generate accurate medical codes automatically"
-        },
-        {
-          icon: FileText,
-          title: "Clinical note generation",
-          description: "Create comprehensive clinical notes from conversations"
-        },
-        {
-          icon: Users,
-          title: "Integration with major EHR systems",
-          description: "Seamlessly connect with 50+ EHR platforms"
-        },
-        {
-          icon: Shield,
-          title: "HIPAA compliant security",
-          description: "Enterprise-grade security and compliance"
-        },
-        {
-          icon: Award,
-          title: "Multi-specialty support",
-          description: "Supports all medical specialties and practices"
-        }
-      ],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop"
-    },
-    {
-      id: 'smart-app',
+      title: "Clinical note generation",
+      description: "Create comprehensive clinical notes from conversations"
+    }, {
+      icon: Users,
+      title: "Integration with major EHR systems",
+      description: "Seamlessly connect with 50+ EHR platforms"
+    }, {
+      icon: Shield,
+      title: "HIPAA compliant security",
+      description: "Enterprise-grade security and compliance"
+    }, {
+      icon: Award,
+      title: "Multi-specialty support",
+      description: "Supports all medical specialties and practices"
+    }],
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop"
+  }, {
+    id: 'smart-app',
+    icon: Brain,
+    title: "KOI Smart App",
+    subtitle: "Intelligent healthcare companion for patients",
+    heroDescription: "Personalized health insights, medication reminders, and seamless connection with healthcare providers through advanced AI technology.",
+    features: [{
       icon: Brain,
-      title: "KOI Smart App",
-      subtitle: "Intelligent healthcare companion for patients",
-      heroDescription: "Personalized health insights, medication reminders, and seamless connection with healthcare providers through advanced AI technology.",
-      features: [
-        {
-          icon: Brain,
-          title: "Personalized health tracking",
-          description: "AI-powered health monitoring and insights"
-        },
-        {
-          icon: Clock,
-          title: "Smart medication reminders",
-          description: "Intelligent reminders based on your schedule"
-        },
-        {
-          icon: Shield,
-          title: "Symptom checker with AI",
-          description: "AI-powered symptom analysis and recommendations"
-        },
-        {
-          icon: Users,
-          title: "Telemedicine integration",
-          description: "Connect with healthcare providers remotely"
-        },
-        {
-          icon: Database,
-          title: "Health analytics dashboard",
-          description: "Comprehensive health data visualization"
-        },
-        {
-          icon: Award,
-          title: "Emergency contact features",
-          description: "Quick access to emergency services and contacts"
-        }
-      ],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
-    },
-    {
-      id: 'appointment-scheduler',
-      icon: Calendar,
-      title: "Appointment Scheduler",
-      subtitle: "AI-powered intelligent scheduling system",
-      heroDescription: "Natural language processing for appointment booking with intelligent calendar management and automated patient communication.",
-      features: [
-        {
-          icon: Brain,
-          title: "Voice-powered scheduling",
-          description: "Schedule appointments using natural language"
-        },
-        {
-          icon: Zap,
-          title: "Natural language processing",
-          description: "Understand and process complex scheduling requests"
-        },
-        {
-          icon: Clock,
-          title: "Automated reminders",
-          description: "Smart reminders via SMS, email, and phone calls"
-        },
-        {
-          icon: Database,
-          title: "Calendar integration",
-          description: "Sync with Google, Outlook, and other calendar systems"
-        },
-        {
-          icon: Users,
-          title: "Multi-provider support",
-          description: "Manage schedules for multiple healthcare providers"
-        },
-        {
-          icon: Award,
-          title: "Real-time availability",
-          description: "Live updates on provider availability and scheduling"
-        }
-      ],
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+      title: "Personalized health tracking",
+      description: "AI-powered health monitoring and insights"
+    }, {
+      icon: Clock,
+      title: "Smart medication reminders",
+      description: "Intelligent reminders based on your schedule"
+    }, {
+      icon: Shield,
+      title: "Symptom checker with AI",
+      description: "AI-powered symptom analysis and recommendations"
+    }, {
+      icon: Users,
+      title: "Telemedicine integration",
+      description: "Connect with healthcare providers remotely"
+    }, {
+      icon: Database,
+      title: "Health analytics dashboard",
+      description: "Comprehensive health data visualization"
+    }, {
+      icon: Award,
+      title: "Emergency contact features",
+      description: "Quick access to emergency services and contacts"
+    }],
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
+  }, {
+    id: 'appointment-scheduler',
+    icon: Calendar,
+    title: "Appointment Scheduler",
+    subtitle: "AI-powered intelligent scheduling system",
+    heroDescription: "Natural language processing for appointment booking with intelligent calendar management and automated patient communication.",
+    features: [{
+      icon: Brain,
+      title: "Voice-powered scheduling",
+      description: "Schedule appointments using natural language"
+    }, {
+      icon: Zap,
+      title: "Natural language processing",
+      description: "Understand and process complex scheduling requests"
+    }, {
+      icon: Clock,
+      title: "Automated reminders",
+      description: "Smart reminders via SMS, email, and phone calls"
+    }, {
+      icon: Database,
+      title: "Calendar integration",
+      description: "Sync with Google, Outlook, and other calendar systems"
+    }, {
+      icon: Users,
+      title: "Multi-provider support",
+      description: "Manage schedules for multiple healthcare providers"
+    }, {
+      icon: Award,
+      title: "Real-time availability",
+      description: "Live updates on provider availability and scheduling"
+    }],
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop"
+  }];
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -147,16 +118,13 @@ const AIProductsPage = () => {
       </section>
 
       {/* Products Sections */}
-      {products.map((product, index) => (
-        <section key={product.id} className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+      {products.map((product, index) => <section key={product.id} className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Product Hero */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="p-4 bg-purple-100 rounded-full mr-4">
-                    <product.icon className="text-purple-600" size={32} />
-                  </div>
+                  
                   <div>
                     <h2 className="text-4xl font-bold text-gray-900">{product.title}</h2>
                     <p className="text-lg text-purple-600 font-medium">{product.subtitle}</p>
@@ -176,11 +144,7 @@ const AIProductsPage = () => {
                 </div>
               </div>
               <div className="relative">
-                <img 
-                  src={product.image} 
-                  alt={product.title} 
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg" 
-                />
+                <img src={product.image} alt={product.title} className="w-full h-80 object-cover rounded-2xl shadow-lg" />
               </div>
             </div>
 
@@ -188,24 +152,19 @@ const AIProductsPage = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Features & Benefits</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {product.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-200 border border-gray-100">
+                {product.features.map((feature, featureIndex) => <div key={featureIndex} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-200 border border-gray-100">
                     <div className="p-3 bg-purple-100 rounded-full w-fit mb-4">
                       <feature.icon className="text-purple-600" size={24} />
                     </div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h4>
                     <p className="text-gray-600">{feature.description}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
-        </section>
-      ))}
+        </section>)}
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AIProductsPage;
