@@ -154,39 +154,10 @@ const AIProductsPage = () => {
             </div>
 
             {/* How it Works Video */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">How it Works</h3>
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-12 text-center">
-                <div className="p-6 bg-white rounded-full w-fit mx-auto mb-6">
-                  <Play className="text-purple-600" size={48} />
-                </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">Watch {product.title} in Action</h4>
-                <p className="text-gray-600 mb-8">
-                  See how {product.title} transforms healthcare workflows and improves patient outcomes
-                </p>
-                <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold">
-                  Watch Demo Video
-                </button>
-              </div>
-            </div>
+            
 
             {/* CTA Section */}
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Ready to Get Started with {product.title}?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Join thousands of healthcare providers who trust Hikigai AI solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-3 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold">
-                  Start Free Trial
-                </button>
-                <button className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-200 font-semibold">
-                  Schedule Demo
-                </button>
-              </div>
-            </div>
+            
           </div>
         </section>)}
       
