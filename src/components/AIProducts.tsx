@@ -37,9 +37,7 @@ const AIProducts = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Features</span> & Benefits
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI-powered healthcare solutions designed to transform your practice and improve patient outcomes
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

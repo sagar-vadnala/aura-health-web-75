@@ -1,42 +1,31 @@
-
 import { Brain, BarChart, Users, BookOpen, Database, Shield } from 'lucide-react';
-
 const PlatformHighlights = () => {
-  const highlights = [
-    {
-      icon: Brain,
-      title: "Gen AI & Predictive Algorithms",
-      description: "Advanced machine learning models for intelligent healthcare insights"
-    },
-    {
-      icon: BarChart,
-      title: "Health Analytics",
-      description: "Comprehensive analytics dashboard for population health management"
-    },
-    {
-      icon: Users,
-      title: "Patient Graph",
-      description: "Connected patient data visualization for holistic care view"
-    },
-    {
-      icon: BookOpen,
-      title: "Medical Knowledge",
-      description: "Evidence-based medical knowledge base with latest research"
-    },
-    {
-      icon: Database,
-      title: "EHR Integration",
-      description: "Seamless integration with 50+ electronic health record systems"
-    },
-    {
-      icon: Shield,
-      title: "HIPAA Compliant",
-      description: "Enterprise-grade security with end-to-end encryption"
-    }
-  ];
-
-  return (
-    <section className="bg-white py-[40px]">
+  const highlights = [{
+    icon: Brain,
+    title: "Gen AI & Predictive Algorithms",
+    description: "Advanced machine learning models for intelligent healthcare insights"
+  }, {
+    icon: BarChart,
+    title: "Health Analytics",
+    description: "Comprehensive analytics dashboard for population health management"
+  }, {
+    icon: Users,
+    title: "Patient Graph",
+    description: "Connected patient data visualization for holistic care view"
+  }, {
+    icon: BookOpen,
+    title: "Medical Knowledge",
+    description: "Evidence-based medical knowledge base with latest research"
+  }, {
+    icon: Database,
+    title: "EHR Integration",
+    description: "Seamless integration with 50+ electronic health record systems"
+  }, {
+    icon: Shield,
+    title: "HIPAA Compliant",
+    description: "Enterprise-grade security with end-to-end encryption"
+  }];
+  return <section className="bg-white py-[20px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -58,8 +47,7 @@ const PlatformHighlights = () => {
           {/* Right Column - Highlights Stack */}
           <div>
             <div className="space-y-4">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300 group">
+              {highlights.map((highlight, index) => <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300 group py-[5px] px-[5px]">
                   <div className="flex items-center space-x-4">
                     <div className="p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl group-hover:from-purple-200 group-hover:to-blue-200 transition-colors duration-200 flex-shrink-0">
                       <highlight.icon className="text-purple-600" size={24} />
@@ -69,20 +57,15 @@ const PlatformHighlights = () => {
                       <p className="text-gray-600 text-sm leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
 
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg">
-            Explore Platform Features
-          </button>
+          <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg px-[15px] py-[5px]">Learn More</button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PlatformHighlights;
