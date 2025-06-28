@@ -1,18 +1,13 @@
 
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleProductsDropdown = () => {
-    setIsProductsDropdownOpen(!isProductsDropdownOpen);
   };
 
   const handleGetDemo = () => {
@@ -41,40 +36,9 @@ const Header = () => {
             <Link to="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Home
             </Link>
-            <div className="relative">
-              <button 
-                onClick={toggleProductsDropdown}
-                className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
-              >
-                Products
-                <ChevronDown className="ml-1" size={16} />
-              </button>
-              {isProductsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <Link 
-                    to="/ai-products" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
-                    onClick={() => setIsProductsDropdownOpen(false)}
-                  >
-                    AI Scribe
-                  </Link>
-                  <Link 
-                    to="/ai-products" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
-                    onClick={() => setIsProductsDropdownOpen(false)}
-                  >
-                    KOI Smart App
-                  </Link>
-                  <Link 
-                    to="/ai-products" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
-                    onClick={() => setIsProductsDropdownOpen(false)}
-                  >
-                    Appointment Scheduler
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/ai-products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+              Products
+            </Link>
             <Link to="/platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Platform
             </Link>
@@ -111,18 +75,9 @@ const Header = () => {
               <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Home
               </Link>
-              <div className="px-3 py-2">
-                <div className="text-base font-medium text-gray-700 mb-2">Products</div>
-                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
-                  AI Scribe
-                </Link>
-                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
-                  KOI Smart App
-                </Link>
-                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
-                  Appointment Scheduler
-                </Link>
-              </div>
+              <Link to="/ai-products" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+                Products
+              </Link>
               <Link to="/platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Platform
               </Link>
