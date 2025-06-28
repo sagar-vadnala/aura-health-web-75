@@ -1,9 +1,6 @@
-
 import { ArrowRight, Shield, Stethoscope, Activity } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="home" className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
+  return <section id="home" className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -31,29 +28,11 @@ const Hero = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left group">
-                <div className="p-3 bg-purple-100 rounded-full mb-3 group-hover:bg-purple-200 transition-colors duration-200">
-                  <Shield className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">HIPAA Compliant</h3>
-                <p className="text-gray-600 text-sm">Enterprise-grade security</p>
-              </div>
               
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left group">
-                <div className="p-3 bg-blue-100 rounded-full mb-3 group-hover:bg-blue-200 transition-colors duration-200">
-                  <Stethoscope className="text-blue-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Clinical Excellence</h3>
-                <p className="text-gray-600 text-sm">Validated by medical professionals</p>
-              </div>
               
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left group">
-                <div className="p-3 bg-green-100 rounded-full mb-3 group-hover:bg-green-200 transition-colors duration-200">
-                  <Activity className="text-green-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Real-time Analytics</h3>
-                <p className="text-gray-600 text-sm">Instant insights for decisions</p>
-              </div>
+              
+              
+              
             </div>
           </div>
 
@@ -173,8 +152,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
