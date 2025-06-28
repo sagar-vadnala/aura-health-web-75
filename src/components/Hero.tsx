@@ -10,7 +10,7 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">Patients</span>
             </h1>
             
-            <p className="mb-8 leading-relaxed text-left font-normal text-black text-xl">Hikigai's AI tools automate clinical documentation, streamline workflows, and enhance patient care, so you can focus on what matters most.</p>
+            <p className="mb-8 leading-relaxed text-left font-normal text-black text-xl">Supercharge your clinical workflows with trustworthy AI built for healthcare. From AI scribing to smart scheduling — Hikigai helps you save time, reduce burnout, and improve patient outcomes.</p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg flex items-center justify-center">
