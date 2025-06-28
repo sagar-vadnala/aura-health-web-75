@@ -1,97 +1,72 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain } from 'lucide-react';
-
 const Platform = () => {
-  const coreFeatures = [
-    {
-      icon: Brain,
-      title: "Advanced AI Engine",
-      description: "Proprietary machine learning models trained specifically for healthcare applications"
-    },
-    {
-      icon: Database,
-      title: "Unified Data Hub",
-      description: "Centralized data processing and management across all healthcare touchpoints"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud-Native Architecture",
-      description: "Scalable infrastructure that grows with your healthcare organization"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "HIPAA-compliant infrastructure with military-grade encryption"
-    }
-  ];
-
-  const fourPillars = [
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Lightning-fast processing with sub-second response times for critical healthcare decisions, ensuring real-time clinical support when it matters most.",
-      metric: "<1s Response",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
-    },
-    {
-      icon: Shield,
-      title: "Security",
-      description: "End-to-end encryption with advanced access controls and comprehensive audit trails, maintaining the highest standards of patient data protection.",
-      metric: "100% HIPAA Compliant",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
-    },
-    {
-      icon: Database,
-      title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems and automated failover mechanisms, ensuring your healthcare operations never stop.",
-      metric: "99.9% Uptime",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
-    },
-    {
-      icon: Users,
-      title: "Scalability",
-      description: "Seamlessly scales from small practices to large hospital networks, adapting to your organization's growth without compromising performance.",
-      metric: "Unlimited Scale",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
-    }
-  ];
-
-  const integrations = [
-    "Epic EHR", "Cerner", "AllScripts", "athenahealth", "NextGen", "eClinicalWorks",
-    "Practice Fusion", "DrChrono", "Amazing Charts", "CureMD", "Greenway Health", "MEDITECH"
-  ];
-
-  const platformFeatures = [
-    {
-      icon: Code,
-      title: "API-First Design",
-      description: "Comprehensive RESTful APIs with extensive documentation and SDK support"
-    },
-    {
-      icon: Users,
-      title: "Multi-User Collaboration",
-      description: "Role-based access control for entire healthcare teams"
-    },
-    {
-      icon: Globe,
-      title: "Global Deployment",
-      description: "Multi-region deployment with data residency compliance"
-    },
-    {
-      icon: Award,
-      title: "Clinical Validation",
-      description: "Validated by leading medical institutions and healthcare professionals"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const coreFeatures = [{
+    icon: Brain,
+    title: "Advanced AI Engine",
+    description: "Proprietary machine learning models trained specifically for healthcare applications"
+  }, {
+    icon: Database,
+    title: "Unified Data Hub",
+    description: "Centralized data processing and management across all healthcare touchpoints"
+  }, {
+    icon: Cloud,
+    title: "Cloud-Native Architecture",
+    description: "Scalable infrastructure that grows with your healthcare organization"
+  }, {
+    icon: Shield,
+    title: "Enterprise Security",
+    description: "HIPAA-compliant infrastructure with military-grade encryption"
+  }];
+  const fourPillars = [{
+    icon: Zap,
+    title: "Performance",
+    description: "Lightning-fast processing with sub-second response times for critical healthcare decisions, ensuring real-time clinical support when it matters most.",
+    metric: "<1s Response",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+  }, {
+    icon: Shield,
+    title: "Security",
+    description: "End-to-end encryption with advanced access controls and comprehensive audit trails, maintaining the highest standards of patient data protection.",
+    metric: "100% HIPAA Compliant",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
+  }, {
+    icon: Database,
+    title: "Reliability",
+    description: "99.9% uptime guarantee with redundant systems and automated failover mechanisms, ensuring your healthcare operations never stop.",
+    metric: "99.9% Uptime",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
+  }, {
+    icon: Users,
+    title: "Scalability",
+    description: "Seamlessly scales from small practices to large hospital networks, adapting to your organization's growth without compromising performance.",
+    metric: "Unlimited Scale",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
+  }];
+  const integrations = ["Epic EHR", "Cerner", "AllScripts", "athenahealth", "NextGen", "eClinicalWorks", "Practice Fusion", "DrChrono", "Amazing Charts", "CureMD", "Greenway Health", "MEDITECH"];
+  const platformFeatures = [{
+    icon: Code,
+    title: "API-First Design",
+    description: "Comprehensive RESTful APIs with extensive documentation and SDK support"
+  }, {
+    icon: Users,
+    title: "Multi-User Collaboration",
+    description: "Role-based access control for entire healthcare teams"
+  }, {
+    icon: Globe,
+    title: "Global Deployment",
+    description: "Multi-region deployment with data residency compliance"
+  }, {
+    icon: Award,
+    title: "Clinical Validation",
+    description: "Validated by leading medical institutions and healthcare professionals"
+  }];
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -106,29 +81,10 @@ const Platform = () => {
       </section>
 
       {/* Core Technology Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Core Technology</h2>
-            <p className="text-xl text-gray-600">Powered by advanced AI and built for healthcare</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreFeatures.map((feature, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-200">
-                <div className="p-4 bg-purple-100 rounded-full w-fit mx-auto mb-6">
-                  <feature.icon className="text-purple-600" size={32} />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* 4 Pillars Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="bg-gray-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">4 Pillars of HKG Platform</h2>
@@ -136,14 +92,9 @@ const Platform = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {fourPillars.map((pillar, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+            {fourPillars.map((pillar, index) => <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
                 <div className="relative mb-6">
-                  <img 
-                    src={pillar.image} 
-                    alt={pillar.title} 
-                    className="w-full h-40 object-cover rounded-lg"
-                  />
+                  <img src={pillar.image} alt={pillar.title} className="w-full h-40 object-cover rounded-lg" />
                   <div className="absolute -bottom-3 left-4 p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
                     <pillar.icon className="text-purple-600" size={24} />
                   </div>
@@ -153,14 +104,13 @@ const Platform = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{pillar.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-center">{pillar.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* Security & Compliance */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -204,7 +154,7 @@ const Platform = () => {
       </section>
 
       {/* Integration Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="bg-gray-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Seamless EHR Integrations</h2>
@@ -212,20 +162,18 @@ const Platform = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-200">
+            {integrations.map((integration, index) => <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <CheckCircle className="text-green-500" size={20} />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{integration}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* Platform Features + Benefits */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Platform Features & Benefits</h2>
@@ -233,8 +181,7 @@ const Platform = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformFeatures.map((feature, index) => (
-              <div key={index} className="flex items-start space-x-6 p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-200">
+            {platformFeatures.map((feature, index) => <div key={index} className="flex items-start space-x-6 p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-200">
                 <div className="p-4 bg-purple-100 rounded-full flex-shrink-0">
                   <feature.icon className="text-purple-600" size={24} />
                 </div>
@@ -242,15 +189,12 @@ const Platform = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Platform;
