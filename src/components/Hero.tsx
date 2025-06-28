@@ -1,24 +1,16 @@
-
 import { ArrowRight, Play } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16">
+  return <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6 md:text-6xl">
               Transforming Healthcare with{' '}
-              <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">
-                AI Innovation
-              </span>
+              <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">on</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Empowering healthcare professionals with intelligent AI solutions that streamline workflows, 
-              enhance patient care, and revolutionize medical documentation.
-            </p>
+            <p className="mb-8 leading-relaxed text-left font-normal text-black text-2xl">Hikigai's AI-driven tools automate clinical documentation, streamline workflows, and enhance patient care, so you can focus on what matters most</p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg flex items-center justify-center">
@@ -27,7 +19,7 @@ const Hero = () => {
               </button>
               
               <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-200 font-semibold flex items-center justify-center">
-                <Play className="mr-2" size={20} />
+                
                 Schedule a Demo
               </button>
             </div>
@@ -37,7 +29,10 @@ const Hero = () => {
           <div className="relative">
             {/* Desktop Screen - Larger */}
             <div className="relative bg-gray-800 rounded-2xl p-2 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300">
-              <div className="bg-white rounded-xl overflow-hidden" style={{ width: '500px', height: '300px' }}>
+              <div className="bg-white rounded-xl overflow-hidden" style={{
+              width: '500px',
+              height: '300px'
+            }}>
                 <div className="bg-gray-100 px-4 py-3 border-b flex items-center space-x-2">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -71,7 +66,10 @@ const Hero = () => {
             </div>
 
             {/* Mobile Screen - Smaller iPhone */}
-            <div className="absolute -bottom-8 -left-16 bg-black rounded-3xl p-1 shadow-xl transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{ width: '140px', height: '280px' }}>
+            <div className="absolute -bottom-8 -left-16 bg-black rounded-3xl p-1 shadow-xl transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{
+            width: '140px',
+            height: '280px'
+          }}>
               <div className="bg-white rounded-3xl overflow-hidden h-full relative">
                 {/* iPhone notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-black rounded-b-2xl z-10"></div>
@@ -100,8 +98,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
