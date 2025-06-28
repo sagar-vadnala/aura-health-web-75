@@ -1,9 +1,6 @@
-
 import { ArrowRight, Shield, Stethoscope, Activity } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="home" className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
+  return <section id="home" className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[30px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -35,7 +32,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10">
               {/* Desktop Screen - Much Larger with thinner frame */}
-              <div className="bg-gray-800 rounded-3xl p-3 shadow-2xl">
+              <div className="bg-gray-800 rounded-3xl p-3 shadow-2xl px-[12px]">
                 <div className="bg-white rounded-2xl overflow-hidden w-[500px] h-[400px]">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-500 h-10 flex items-center px-6">
                     <div className="flex space-x-2">
@@ -154,8 +151,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

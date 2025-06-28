@@ -31,7 +31,7 @@ const AIProducts = () => {
     description: "AI-powered research assistant that helps physicians stay updated with latest medical literature",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop"
   }];
-  return <section id="features" className="py-20 bg-white">
+  return <section id="features" className="bg-white py-[40px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
