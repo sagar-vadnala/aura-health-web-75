@@ -10,9 +10,7 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 bg-clip-text text-transparent">Patients</span>
             </h1>
             
-            <p className="mb-8 leading-relaxed text-left font-normal text-black text-xl">
-              Hikigai's AI-driven tools automate clinical documentation, streamline workflows, and enhance patient care, so you can focus on what matters most
-            </p>
+            <p className="mb-8 leading-relaxed text-left font-normal text-black text-xl">Hikigai's AI tools automate clinical documentation, streamline workflows, and enhance patient care, so you can focus on what matters most.</p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg flex items-center justify-center">
@@ -34,7 +32,7 @@ const Hero = () => {
               width: '600px',
               height: '360px'
             }}>
-                <div className="bg-gray-100 py-3 border-b flex items-center space-x-2 px-0">
+                <div className="bg-gray-100 py-3 border-b flex items-center space-x-2 px-[5px]">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
