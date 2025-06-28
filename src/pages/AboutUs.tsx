@@ -141,7 +141,7 @@ const AboutUs = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -161,7 +161,7 @@ const AboutUs = () => {
       {/* Vision */}
       <section className="bg-gray-50 py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12 py-[40px] px-[40px]">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-6">
                 <Globe className="text-purple-600" size={48} />
@@ -181,7 +181,7 @@ const AboutUs = () => {
       {/* Mission */}
       <section className="bg-white py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 md:p-12 py-[40px] px-[40px]">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex justify-center mb-6">
                 <Target className="text-purple-600" size={48} />
@@ -202,68 +202,10 @@ const AboutUs = () => {
       
 
       {/* Journey / Future Scope */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex justify-center mb-6">
-              <Calendar className="text-purple-600" size={48} />
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Journey & Future Scope</h3>
-            <p className="text-lg text-gray-600">The milestones that shaped our path and our vision for tomorrow</p>
-          </div>
-          
-          <div className="relative">
-            <div className="flex overflow-x-auto pb-6">
-              <div className="flex space-x-8 min-w-max">
-                {journey.map((item, index) => <div key={index} className="flex flex-col items-center min-w-[300px]">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-4">
-                      <div className="text-2xl font-bold text-purple-600 mb-2 text-center">{item.year}</div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">{item.title}</h4>
-                      <p className="text-gray-600 mb-4 text-center">{item.description}</p>
-                      <div className="text-center">
-                        <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
-                          {item.milestone}
-                        </span>
-                      </div>
-                    </div>
-                    {index < journey.length - 1 && <div className="w-8 h-0.5 bg-purple-200"></div>}
-                  </div>)}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Remote 1st Culture */}
-      <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-[40px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <Home className="text-purple-600" size={48} />
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Remote-First Culture</h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We believe that great work happens everywhere. Our remote-first approach allows us to attract 
-              top talent globally while maintaining strong collaboration and innovation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-              <div className="text-gray-600">Remote Positions</div>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
-              <div className="text-gray-600">Countries</div>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-              <div className="text-gray-600">Global Coverage</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Team */}
       <section className="bg-white py-[40px]">
