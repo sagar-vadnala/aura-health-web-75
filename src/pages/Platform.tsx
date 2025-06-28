@@ -1,3 +1,4 @@
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain } from 'lucide-react';
@@ -30,26 +31,30 @@ const Platform = () => {
     {
       icon: Zap,
       title: "Performance",
-      description: "Lightning-fast processing with sub-second response times for critical healthcare decisions",
-      metric: "<1s Response"
+      description: "Lightning-fast processing with sub-second response times for critical healthcare decisions, ensuring real-time clinical support when it matters most.",
+      metric: "<1s Response",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
     },
     {
       icon: Shield,
       title: "Security",
-      description: "End-to-end encryption with advanced access controls and audit trails",
-      metric: "100% HIPAA Compliant"
+      description: "End-to-end encryption with advanced access controls and comprehensive audit trails, maintaining the highest standards of patient data protection.",
+      metric: "100% HIPAA Compliant",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
     },
     {
       icon: Database,
       title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems and automated failover",
-      metric: "99.9% Uptime"
+      description: "99.9% uptime guarantee with redundant systems and automated failover mechanisms, ensuring your healthcare operations never stop.",
+      metric: "99.9% Uptime",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
     },
     {
       icon: Users,
       title: "Scalability",
-      description: "Seamlessly scales from small practices to large hospital networks",
-      metric: "Unlimited Scale"
+      description: "Seamlessly scales from small practices to large hospital networks, adapting to your organization's growth without compromising performance.",
+      metric: "Unlimited Scale",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
     }
   ];
 
@@ -130,21 +135,24 @@ const Platform = () => {
             <p className="text-xl text-gray-600">The foundation of reliable healthcare AI</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {fourPillars.map((pillar, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-200">
-                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
-                    <pillar.icon className="text-purple-600" size={32} />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-semibold text-gray-900">{pillar.title}</h3>
-                      <span className="text-lg font-bold text-purple-600">{pillar.metric}</span>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+                <div className="relative mb-6">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-40 object-cover rounded-lg"
+                  />
+                  <div className="absolute -bottom-3 left-4 p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
+                    <pillar.icon className="text-purple-600" size={24} />
                   </div>
                 </div>
+                <div className="text-center mb-4">
+                  <span className="text-lg font-bold text-purple-600">{pillar.metric}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{pillar.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-center">{pillar.description}</p>
               </div>
             ))}
           </div>
