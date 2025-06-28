@@ -10,7 +10,7 @@ const Testimonials = () => {
     location: "Michigan, USA"
   }];
   return <section className="bg-gray-50 py-[40px]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-[4px] sm:px-0">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What Healthcare Professionals <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Are Saying</span>
