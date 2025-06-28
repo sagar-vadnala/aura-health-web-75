@@ -14,7 +14,7 @@ const Testimonials = () => {
     location: "Healthcare Partners, California"
   }];
   return <section className="bg-gray-50 py-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What Healthcare Professionals <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Are Saying</span>
@@ -25,7 +25,7 @@ const Testimonials = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative">
+          {testimonials.map((testimonial, index) => <div key={index} className="rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative bg-slate-50">
               <div className="absolute top-6 right-6 text-purple-200">
                 <Quote size={32} />
               </div>
