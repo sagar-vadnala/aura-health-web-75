@@ -1,4 +1,3 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Shield, Zap, Database, Cloud, Code, Users, CheckCircle, Lock, Award, Globe, Brain, Settings, UserCheck, AlertTriangle, EyeOff, FileText } from 'lucide-react';
@@ -31,8 +30,9 @@ const Platform = () => {
     }
   ];
 
-  const supportedEHRs = [
-    "Epic", "Oracle Cerner", "Athena Health", "eClinicalWorks", "Hikigai SmartPAM"
+  const integrations = [
+    "Epic EHR", "Cerner", "AllScripts", "athenahealth", "NextGen", "eClinicalWorks", 
+    "Practice Fusion", "DrChrono", "Amazing Charts", "CureMD", "Greenway Health", "MEDITECH"
   ];
 
   const platformFeatures = [
@@ -84,23 +84,25 @@ const Platform = () => {
             </p>
           </div>
 
-          {/* Hero paragraphs */}
-          <div className="max-w-5xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
-            <p>
-              The Hikigai Platform represents a paradigm shift in healthcare technology, where artificial intelligence doesn't just process data—it understands context, learns from interactions, and evolves with your practice. Our platform is built on the foundation of trust, transparency, and clinical excellence.
-            </p>
-            <p>
-              By leveraging Large Action Models, we've created an AI system that can perform complex healthcare tasks while maintaining the nuanced understanding that medical practice requires. Our Knowledge Graphs connect disparate pieces of medical information, creating a comprehensive view of patient health that was previously impossible.
-            </p>
-            <p>
-              The Agentic Framework enables our AI to take autonomous actions within defined parameters, allowing for real-time decision support and workflow automation that adapts to your specific practice patterns. This isn't just another healthcare tool—it's your intelligent partner in delivering exceptional patient care.
-            </p>
-            <p>
-              Security and privacy are not afterthoughts but fundamental design principles. Every component of our platform is built with healthcare's stringent requirements in mind, ensuring that patient data remains protected while enabling the collaborative care that modern medicine demands.
-            </p>
-            <p>
-              Join thousands of healthcare professionals who have already transformed their practice with Hikigai. Experience the future of healthcare technology today, where AI amplifies human expertise rather than replacing it.
-            </p>
+          {/* Message Block */}
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 max-w-5xl mx-auto">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Hikigai Platform represents a paradigm shift in healthcare technology, where artificial intelligence doesn't just process data—it understands context, learns from interactions, and evolves with your practice. Our platform is built on the foundation of trust, transparency, and clinical excellence.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                By leveraging Large Action Models, we've created an AI system that can perform complex healthcare tasks while maintaining the nuanced understanding that medical practice requires. Our Knowledge Graphs connect disparate pieces of medical information, creating a comprehensive view of patient health that was previously impossible.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Agentic Framework enables our AI to take autonomous actions within defined parameters, allowing for real-time decision support and workflow automation that adapts to your specific practice patterns. This isn't just another healthcare tool—it's your intelligent partner in delivering exceptional patient care.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Security and privacy are not afterthoughts but fundamental design principles. Every component of our platform is built with healthcare's stringent requirements in mind, ensuring that patient data remains protected while enabling the collaborative care that modern medicine demands.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Join thousands of healthcare professionals who have already transformed their practice with Hikigai. Experience the future of healthcare technology today, where AI amplifies human expertise rather than replacing it.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -178,7 +180,7 @@ const Platform = () => {
         </div>
       </section>
 
-      {/* EHR Integration Section - Reworked */}
+      {/* Integration Section */}
       <section className="bg-gray-50 py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -186,73 +188,15 @@ const Platform = () => {
             <p className="text-xl text-gray-600">Connect with your existing healthcare systems effortlessly</p>
           </div>
           
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Supported EHR Systems</h3>
-                <div className="space-y-4 mb-8">
-                  {supportedEHRs.map((ehr, index) => (
-                    <div key={index} className="flex items-center space-x-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4">
-                      <CheckCircle className="text-green-500" size={20} />
-                      <span className="text-lg font-medium text-gray-700">{ehr}</span>
-                      {ehr === "Hikigai SmartPAM" && (
-                        <span className="text-sm bg-purple-100 text-purple-600 px-2 py-1 rounded-full">Our EHR</span>
-                      )}
-                    </div>
-                  ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-200">
+                <div className="flex items-center justify-center mb-2">
+                  <CheckCircle className="text-green-500" size={20} />
                 </div>
-                
-                <div className="bg-blue-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Smart on FHIR Compatible</h4>
-                  <p className="text-gray-600">
-                    Hikigai platform can integrate with any EHR that supports Smart on FHIR, ensuring broad compatibility across the healthcare ecosystem.
-                  </p>
-                </div>
+                <span className="text-sm font-medium text-gray-700">{integration}</span>
               </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Additional Integrations</h3>
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Health Data Platforms</h4>
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-green-500" size={16} />
-                        <span className="text-gray-700">Apple Health</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-green-500" size={16} />
-                        <span className="text-gray-700">Google Health</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Healthcare Services</h4>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-green-500" size={16} />
-                        <span>Medication ordering systems</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-green-500" size={16} />
-                        <span>Lab test ordering platforms</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-green-500" size={16} />
-                        <span>Claims processing systems</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-yellow-50 rounded-lg p-6">
-                    <p className="text-gray-700 font-medium">
-                      We are continuously integrating with all major industry standard healthcare systems and data sources to provide comprehensive interoperability.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

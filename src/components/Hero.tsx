@@ -1,9 +1,6 @@
-
 import { ArrowRight, Play } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16 py-[40px]">
+  return <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16 py-[40px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -14,7 +11,7 @@ const Hero = () => {
             </h1>
             
             <p className="mb-8 leading-relaxed text-left font-normal text-black text-xl">
-              Hikigai's AI-driven tools automate clinical documentation, streamline workflows, and enhance patient care, so you can focus on what matters most.
+              Supercharge your clinical workflows with trustworthy AI built for healthcare. From AI scribing to smart scheduling — Hikigai helps you save time, reduce burnout, and improve patient outcomes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -32,8 +29,11 @@ const Hero = () => {
           {/* Right Column - AI Scribe Interface */}
           <div className="relative">
             {/* Desktop Screen - Bigger with thin frame */}
-            <div className="relative bg-gray-800 rounded-2xl p-1 shadow-2xl">
-              <div className="bg-white rounded-xl overflow-hidden w-[600px] h-[360px]">
+            <div className="relative bg-gray-800 rounded-2xl p-0.5 shadow-2xl py-[5px] px-[5px]">
+              <div className="bg-white rounded-xl overflow-hidden" style={{
+              width: '650px',
+              height: '380px'
+            }}>
                 <div className="bg-gray-100 py-3 border-b flex items-center space-x-2 px-4">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -42,7 +42,7 @@ const Hero = () => {
                   </div>
                   <div className="text-sm text-gray-600 ml-4">Hikigai AI Scribe - Live Transcription</div>
                 </div>
-                <div className="p-6 h-full bg-white overflow-hidden">
+                <div className="p-6 h-full bg-white">
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2 mb-4">
                       <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
@@ -67,7 +67,10 @@ const Hero = () => {
             </div>
 
             {/* iPhone Screen - Moved to right side */}
-            <div className="absolute -bottom-8 -right-20 bg-black rounded-3xl p-1 shadow-xl w-[120px] h-[240px]">
+            <div className="absolute -bottom-8 -right-20 bg-black rounded-3xl p-1 shadow-xl" style={{
+            width: '120px',
+            height: '240px'
+          }}>
               <div className="bg-white rounded-3xl overflow-hidden h-full relative">
                 {/* iPhone notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-5 bg-black rounded-b-2xl z-10"></div>
@@ -96,8 +99,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

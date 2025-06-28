@@ -79,7 +79,8 @@ const AboutUs = () => {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                To create a world where AI seamlessly integrates into healthcare workflows, making quality care accessible to everyone, everywhere.
+                To create a world where AI seamlessly integrates into healthcare workflows, 
+                making quality care accessible to everyone, everywhere.
               </p>
             </div>
           </div>
@@ -96,7 +97,8 @@ const AboutUs = () => {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                To transform healthcare delivery by providing intelligent AI solutions that empower professionals to make better decisions and improve patient outcomes.
+                To transform healthcare delivery by providing intelligent AI solutions 
+                that empower professionals to make better decisions and improve patient outcomes.
               </p>
             </div>
           </div>
@@ -113,7 +115,7 @@ const AboutUs = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {foundingTeam.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200 border border-gray-100">
+              <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200">
                 <div className="mb-6">
                   <img 
                     src={member.image} 
@@ -132,31 +134,20 @@ const AboutUs = () => {
             <p className="text-lg text-gray-600">13 dedicated professionals driving healthcare innovation</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.slice(0, 12).map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200 border border-gray-100">
-                <div className="mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center hover:shadow-md transition-shadow duration-200 border border-gray-100">
+                <div className="mb-4">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-32 h-40 rounded-lg object-cover mx-auto" 
+                    className="w-20 h-24 rounded-lg object-cover mx-auto" 
                   />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h4>
-                <p className="text-purple-600 font-medium text-sm">{member.role}</p>
+                <h4 className="text-sm font-semibold text-gray-900 mb-1">{member.name}</h4>
+                <p className="text-purple-600 text-xs">{member.role}</p>
               </div>
             ))}
-            <div className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-200 border border-gray-100">
-              <div className="mb-6">
-                <img 
-                  src={teamMembers[12].image} 
-                  alt={teamMembers[12].name} 
-                  className="w-32 h-40 rounded-lg object-cover mx-auto" 
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">{teamMembers[12].name}</h4>
-              <p className="text-purple-600 font-medium text-sm">{teamMembers[12].role}</p>
-            </div>
           </div>
         </div>
       </section>
@@ -214,22 +205,13 @@ const AboutUs = () => {
       {/* Careers */}
       <section className="bg-white py-[40px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Careers</h3>
-            <p className="text-lg text-gray-600 mb-8">
-              Join our mission to transform healthcare through AI innovation
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 text-center max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 text-center">
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Join Our Team</h4>
             <p className="text-lg text-gray-600 mb-8">
               We are currently focused on strengthening our core team and do not have open positions at this time. 
               However, we're always interested in connecting with exceptional talent who share our vision for transforming healthcare through AI.
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-3 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold">
-              Open Positions
-            </button>
-            <p className="text-md text-gray-500 mt-4">
+            <p className="text-md text-gray-500">
               Follow us on LinkedIn for future opportunities or reach out to discuss potential collaborations.
             </p>
           </div>
