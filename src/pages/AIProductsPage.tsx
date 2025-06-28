@@ -101,16 +101,13 @@ const AIProductsPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[40px]">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-[30px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Products</span>
+              Our <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">AI Products</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our innovative AI-powered solutions designed to transform 
-              healthcare delivery and enhance patient care experiences.
-            </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Hikigai's suite of tools empowers clinicians and care teams to work smarter, not harder.</p>
           </div>
         </div>
       </section>
