@@ -1,6 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 const Hero = () => {
-  return <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16">
+  return <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-16 py-[40px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
