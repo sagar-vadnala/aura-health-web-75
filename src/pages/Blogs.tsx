@@ -57,7 +57,7 @@ const Blogs = () => {
       {/* Banner */}
       <section className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-[20px]">
+          <div className="text-center py-[30px]">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Healthcare AI <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Insights</span>
             </h1>
@@ -94,11 +94,8 @@ const Blogs = () => {
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
-                    <button className="flex items-center text-purple-600 hover:text-purple-700 font-medium group-hover:translate-x-1 transition-transform duration-200">
-                      Read More
-                      <ArrowRight size={16} className="ml-1" />
-                    </button>
+                    
+                    
                   </div>
                 </div>
               </article>)}
@@ -107,7 +104,7 @@ const Blogs = () => {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-[10px]">
+      <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-[20px]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Stay Updated with Healthcare AI Trends
