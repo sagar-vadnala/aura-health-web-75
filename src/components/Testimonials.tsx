@@ -1,27 +1,19 @@
-
 import { Quote } from 'lucide-react';
-
 const Testimonials = () => {
-  const testimonials = [
-    {
-      content: "I am a firm believer in Artificial Intelligence in health care. Hikigai Platform is completely reshaping my workflow, making it easy for me to embrace a digital approach to healthcare in this semi-rural town",
-      author: "Dr. Mahendran",
-      location: "Coimbatore, India"
-    },
-    {
-      content: "We have been using human scribes for documenting the patient encounters. Using AI for automating documentation is a game changer. Not only it offers high ROI, it also reduces human errors which is critical in patient care and, also, in claims processing",
-      author: "Dr. Nair",
-      location: "Michigan, USA"
-    },
-    {
-      content: "The seamless integration with our EHR system and the intuitive interface makes Hikigai AI an essential tool in our practice. Our patients appreciate the increased face-time during consultations.",
-      author: "Dr. Emily Watson",
-      location: "Healthcare Partners, California"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gray-50">
+  const testimonials = [{
+    content: "I am a firm believer in Artificial Intelligence in health care. Hikigai Platform is completely reshaping my workflow, making it easy for me to embrace a digital approach to healthcare in this semi-rural town",
+    author: "Dr. Mahendran",
+    location: "Coimbatore, India"
+  }, {
+    content: "We have been using human scribes for documenting the patient encounters. Using AI for automating documentation is a game changer. Not only it offers high ROI, it also reduces human errors which is critical in patient care and, also, in claims processing",
+    author: "Dr. Nair",
+    location: "Michigan, USA"
+  }, {
+    content: "The seamless integration with our EHR system and the intuitive interface makes Hikigai AI an essential tool in our practice. Our patients appreciate the increased face-time during consultations.",
+    author: "Dr. Emily Watson",
+    location: "Healthcare Partners, California"
+  }];
+  return <section className="bg-gray-50 py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -33,8 +25,7 @@ const Testimonials = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative">
+          {testimonials.map((testimonial, index) => <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative">
               <div className="absolute top-6 right-6 text-purple-200">
                 <Quote size={32} />
               </div>
@@ -47,24 +38,13 @@ const Testimonials = () => {
                 <h4 className="font-semibold text-gray-900 text-lg">{testimonial.author}</h4>
                 <p className="text-purple-600 font-medium">{testimonial.location}</p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Join Our Growing Community</h3>
-            <p className="text-lg text-gray-700 mb-6">
-              Over 10,000+ healthcare professionals trust Hikigai AI to enhance their practice
-            </p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-3 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-semibold shadow-lg">
-              Join the Community
-            </button>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Testimonials;
