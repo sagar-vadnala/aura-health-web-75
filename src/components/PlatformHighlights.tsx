@@ -45,12 +45,8 @@ const PlatformHighlights = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Platform <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Highlights</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Hikigai Platform harnesses the power of Large Action Models and Knowledge Graphs to deliver a comprehensive, 360-degree view of patient health data enriched with the latest medical insights.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our platform seamlessly integrates with existing EHR systems, empowering doctors and healthcare specialists with personalized recommendations, intelligent automation, and actionable insights at every stage of the patient journey.
-            </p>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed text-left">Hikigai Platform uses the power of Large Action Models & Knowledge Graphs to give a 360° view of patient's health enriched with medical insights.</p>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">Our platform seamlessly integrates with existing EHRs, empowering doctors and healthcare specialists with personalized recommendations, intelligent automation, and actionable insights at every stage of the patient journey.</p>
             <p className="text-lg text-gray-600 leading-relaxed">
               By streamlining workflows and enhancing care delivery, Hikigai enables providers to focus on what matters most: guiding each patient on their unique path to better health.
             </p>
