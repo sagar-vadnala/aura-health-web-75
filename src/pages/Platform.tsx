@@ -72,10 +72,7 @@ const Platform = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               The <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Hikigai Platform</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built for healthcare professionals, our platform combines cutting-edge AI capabilities 
-              with the security and reliability that healthcare demands.
-            </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Built by combining Large Action Models (LAMs), structured Knowledge Graphs, and an advanced Agentic Framework to deliver healthcare insights that you can trust.</p>
           </div>
         </div>
       </section>
