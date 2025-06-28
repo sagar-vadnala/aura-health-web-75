@@ -1,8 +1,9 @@
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import PlatformHome from '../components/PlatformHome';
+import CTAForm from '../components/CTAForm';
 import AIProducts from '../components/AIProducts';
+import PlatformHighlights from '../components/PlatformHighlights';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
@@ -11,8 +12,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <PlatformHome />
+      <CTAForm />
       <AIProducts />
+      <PlatformHighlights />
       <Testimonials />
       <Footer />
     </div>

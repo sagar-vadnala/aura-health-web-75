@@ -1,5 +1,6 @@
 
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -38,27 +39,27 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Navigation */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Navigation</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li><Link to="/" className="hover:text-purple-400 transition-colors duration-200">Home</Link></li>
+              <li><Link to="/ai-products" className="hover:text-purple-400 transition-colors duration-200">Products</Link></li>
+              <li><Link to="/platform" className="hover:text-purple-400 transition-colors duration-200">Platform</Link></li>
+              <li><Link to="/about-us" className="hover:text-purple-400 transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/blogs" className="hover:text-purple-400 transition-colors duration-200">Blogs</Link></li>
+            </ul>
+          </div>
+
           {/* Products */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Products</h3>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Neural Diagnostics</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Vision AI</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Cardiac Monitor</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Drug Discovery</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Clinical Notes AI</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li><a href="#about" className="hover:text-purple-400 transition-colors duration-200">About Us</a></li>
-              <li><a href="#careers" className="hover:text-purple-400 transition-colors duration-200">Careers</a></li>
-              <li><a href="#news" className="hover:text-purple-400 transition-colors duration-200">News</a></li>
-              <li><a href="#contact" className="hover:text-purple-400 transition-colors duration-200">Contact</a></li>
-              <li><a href="#privacy" className="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a></li>
+              <li><Link to="/ai-products" className="hover:text-purple-400 transition-colors duration-200">AI Scribe</Link></li>
+              <li><Link to="/ai-products" className="hover:text-purple-400 transition-colors duration-200">KOI Smart App</Link></li>
+              <li><Link to="/ai-products" className="hover:text-purple-400 transition-colors duration-200">Appointment Scheduler</Link></li>
+              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Claims Processing</a></li>
+              <li><a href="#" className="hover:text-purple-400 transition-colors duration-200">Patient Analytics</a></li>
             </ul>
           </div>
         </div>

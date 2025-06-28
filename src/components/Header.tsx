@@ -15,6 +15,11 @@ const Header = () => {
     setIsProductsDropdownOpen(!isProductsDropdownOpen);
   };
 
+  const handleGetDemo = () => {
+    // This will be implemented to open a form modal
+    console.log('Get Demo clicked');
+  };
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,9 +40,6 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               Home
-            </Link>
-            <Link to="/platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              Platform
             </Link>
             <div className="relative">
               <button 
@@ -63,18 +65,34 @@ const Header = () => {
                   >
                     KOI Smart App
                   </Link>
+                  <Link 
+                    to="/ai-products" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                    onClick={() => setIsProductsDropdownOpen(false)}
+                  >
+                    Appointment Scheduler
+                  </Link>
                 </div>
               )}
             </div>
+            <Link to="/platform" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+              Platform
+            </Link>
             <Link to="/about-us" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
               About Us
             </Link>
+            <Link to="/blogs" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+              Blogs
+            </Link>
           </nav>
 
-          {/* CTA Button */}
+          {/* Get Demo Button */}
           <div className="hidden md:flex">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-medium shadow-lg">
-              Get Started
+            <button 
+              onClick={handleGetDemo}
+              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-medium shadow-lg"
+            >
+              Get Demo
             </button>
           </div>
 
@@ -93,9 +111,6 @@ const Header = () => {
               <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 Home
               </Link>
-              <Link to="/platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
-                Platform
-              </Link>
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-gray-700 mb-2">Products</div>
                 <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
@@ -104,12 +119,24 @@ const Header = () => {
                 <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
                   KOI Smart App
                 </Link>
+                <Link to="/ai-products" className="block px-3 py-1 text-sm text-gray-600 hover:text-purple-600">
+                  Appointment Scheduler
+                </Link>
               </div>
+              <Link to="/platform" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+                Platform
+              </Link>
               <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
                 About Us
               </Link>
-              <button className="w-full mt-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-medium">
-                Get Started
+              <Link to="/blogs" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">
+                Blogs
+              </Link>
+              <button 
+                onClick={handleGetDemo}
+                className="w-full mt-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-full hover:from-purple-700 hover:to-blue-600 transition-all duration-200 font-medium"
+              >
+                Get Demo
               </button>
             </div>
           </div>
